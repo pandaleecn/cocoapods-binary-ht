@@ -1,0 +1,4 @@
+include:
+  - project: 'mobile/dax-ios/cicd'
+    ref: master
+    file: '/config/cocoapods_binary_cache/.gitlab-ci.yml'

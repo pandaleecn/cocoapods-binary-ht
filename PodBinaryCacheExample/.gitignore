@@ -1,0 +1,9 @@
+/build
+/DerivedData
+/Pods
+/_Prebuild
+/_Prebuild_delta
+/.bundle
+__pycache__/
+xcshareddata/
+xcuserdata/

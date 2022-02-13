@@ -1,0 +1,17 @@
+.DS_Store
+**/*/__pycache__
+
+DerivedData/
+*.xcworkspacedata
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/xcshareddata
+UserInterfaceState.xcuserstate
+xcuserdata/
+
+Pods/
+build/
+
+.bundle/
+
+.stats/
+.logs/

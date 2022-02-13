@@ -1,0 +1,42 @@
+name: test
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  rspec:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Ruby setup
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+      - name: Bundle installation
+        run: |
+          gem install bundler:2.1.2
+          bundle install
+      - name: RSpec
+        run: |
+          bundle exec rspec
+
+  integration_test:
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        mode: [non-prebuild, prebuild-changes, prebuild-all]
+        xcframework: [false, true]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Bundle installation
+        run: |
+          gem install bundler:2.1.2
+          bundle install
+      - name: Integration tests
+        run: |
+          sh scripts/integration_test.sh ${{matrix.mode}} ${{matrix.xcframework}}

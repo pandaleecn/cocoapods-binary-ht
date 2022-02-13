@@ -1,0 +1,2 @@
+require_relative "detected_prebuilt_pods/target_definition"
+require_relative "detected_prebuilt_pods/installer"
