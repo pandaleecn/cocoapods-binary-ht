@@ -18,7 +18,7 @@ Requirements
 Add the gem `cocoapods-binary-ht` to the `Gemfile` of your project.
 
 ```rb
-gem "cocoapods-binary-ht", :git => "https://github.com/pandaleecn/cocoapods-binary-ht.git", :tag => "0.1.11"
+gem "cocoapods-binary-ht", :git => "https://github.com/pandaleecn/cocoapods-binary-ht.git", :tag => "1.0.0"
 ```
 
 Then, run `bundle install` to install the added gem.
